@@ -9,6 +9,7 @@
 import Alamofire
 import SwiftyJSON
 import PromiseKit
+import Foundation
 
 
 struct SearchManager {
@@ -18,9 +19,17 @@ struct SearchManager {
                 resolve([])
             }
             var books = [Book]()
-            let name = name.replacingOccurrences(of: " ", with: "+")
+            guard let name = name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+                reject(NetworkError.RequestURLError)
+                return
+            }
+            
+            print(name)
             
             Alamofire.request("http://wannashare.info/api/v1/list/search?name=\(name)").responseJSON { response in
+                if response.request == nil {
+                    reject(NetworkError.RequestURLError)
+                }
                 if response.value == nil {
                    reject(NetworkError.UnableToParseJSON)
                 }

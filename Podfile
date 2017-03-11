@@ -16,5 +16,6 @@ target 'VManga' do
 	pod 'FacebookCore'
 	pod 'FacebookLogin'
 	pod 'FacebookShare'
+    pod 'SocketIO'
 	
 end
