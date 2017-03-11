@@ -14,8 +14,7 @@ class Book {
     var title : String!
     var description : String!
     var category : [String]!
-    var image : String!
-    var content : String!
+    var numberOfChapters: Int = 0
     
     init() {}
     init(id: Int, thumbnail: String, title: String) {

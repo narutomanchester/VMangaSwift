@@ -35,6 +35,7 @@
 		492DF3731E73B21900C50983 /* HHReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492DF3721E73B21900C50983 /* HHReadingViewController.swift */; };
 		4942EC9E1E73399400DCC3ED /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942EC9D1E73399400DCC3ED /* API.swift */; };
 		4942ECC81E7373DA00DCC3ED /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942ECC71E7373DA00DCC3ED /* Debug.swift */; };
+		496E717C1E747CCD006B5A05 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496E717B1E747CCD006B5A05 /* User.swift */; };
 		51928FB61A68053AE4C05B23 /* Pods_VManga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908961B10D2D01A6B67B3F44 /* Pods_VManga.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		492DF3721E73B21900C50983 /* HHReadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHReadingViewController.swift; sourceTree = "<group>"; };
 		4942EC9D1E73399400DCC3ED /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4942ECC71E7373DA00DCC3ED /* Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
+		496E717B1E747CCD006B5A05 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		79FDE8EB6E4375DDA8802328 /* Pods-VManga.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VManga.release.xcconfig"; path = "Pods/Target Support Files/Pods-VManga/Pods-VManga.release.xcconfig"; sourceTree = "<group>"; };
 		908961B10D2D01A6B67B3F44 /* Pods_VManga.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VManga.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F917A3E4DDC141D9A9D795 /* Pods-VManga.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VManga.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VManga/Pods-VManga.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				046A3EAD1E72C8C500657429 /* Book.swift */,
+				496E717B1E747CCD006B5A05 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				4942EC9E1E73399400DCC3ED /* API.swift in Sources */,
 				492DF3731E73B21900C50983 /* HHReadingViewController.swift in Sources */,
 				04F01FB31E7312F300304491 /* HHRecentSearchBookTableViewCell.swift in Sources */,
+				496E717C1E747CCD006B5A05 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
