@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Djo-p5-BPZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Djo-p5-BPZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="-1296" y="-852"/>
         </scene>
-        <!--View Controller-->
+        <!--Account-->
         <scene sceneID="WcR-I2-Gdh">
             <objects>
-                <viewController id="Xsq-ge-bdG" sceneMemberID="viewController">
+                <viewController title="Account" id="Xsq-ge-bdG" customClass="HHAccountViewController" customModule="VManga" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SwV-uV-EFx"/>
                         <viewControllerLayoutGuide type="bottom" id="gIQ-wB-Scl"/>
@@ -289,7 +289,7 @@
                         <viewControllerLayoutGuide type="top" id="Erc-56-FzY"/>
                         <viewControllerLayoutGuide type="bottom" id="TE4-WQ-ib1"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ldd-Ao-jzU" customClass="HHHomeView" customModule="VManga" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="ldd-Ao-jzU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
