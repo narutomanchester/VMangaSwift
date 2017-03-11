@@ -8,7 +8,7 @@
 
 import UIKit
 import ImageSlideshow
-import SDWebImage
+
 
 class HHHomeView: UIView ,UITableViewDataSource  , UITableViewDelegate {
 
@@ -21,18 +21,13 @@ class HHHomeView: UIView ,UITableViewDataSource  , UITableViewDelegate {
         super.awakeFromNib()
         
     }
-
+    
+    let afNetworkingSource = [AFURLSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!, AFURLSource(urlString: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")!, AFURLSource(urlString: "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080")!]
     
     func setUp(){
-
-        var image1 : UIImageView
-        var  url = URL(string: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")
-        image1.sd_setImage(with: url)
         
-        var image2 : UIImageView
-        url = URL(string: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")
-        image2.sd_setImage(with: url)
-
+        setUpSlideShow()
+        
         self.tableview.dataSource = self
         self.tableview.delegate = self
         
@@ -40,6 +35,27 @@ class HHHomeView: UIView ,UITableViewDataSource  , UITableViewDelegate {
         self.tableview.register(nib, forCellReuseIdentifier: "HHHomeTableViewCell")
         self.tableview.rowHeight = self.frame.height * 1.4/4
         
+    }
+    
+    func setUpSlideShow(){
+        
+        sildeshow.backgroundColor = UIColor.white
+        sildeshow.slideshowInterval = 5.0
+        sildeshow.pageControlPosition = PageControlPosition.underScrollView
+        sildeshow.pageControl.currentPageIndicatorTintColor = UIColor.lightGray
+        sildeshow.pageControl.pageIndicatorTintColor = UIColor.black
+        sildeshow.contentScaleMode = UIViewContentMode.scaleAspectFill
+        sildeshow.currentPageChanged = { page in
+            print("current page:", page)
+        }
+        sildeshow.setImageInputs(afNetworkingSource)
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.didTap))
+        sildeshow.addGestureRecognizer(recognizer)
+    }
+    
+    func didTap() {
+       // sildeshow.presentFullScreenController(from: self.sildeshow)
     }
     
      func numberOfRows(inSection section: Int) -> Int {

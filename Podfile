@@ -18,5 +18,6 @@ target 'VManga' do
 	pod 'FacebookShare'
     pod 'SocketIO'
 	pod 'ImageSlideshow', '~> 1.1.0'
+	pod "ImageSlideshow/AFURL"
 
 end
