@@ -26,7 +26,7 @@ class HHHomeTableViewCell: UITableViewCell , UICollectionViewDelegate , UICollec
         self.collectionView.backgroundColor = .none
         self.backgroundColor = .none
         let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: self.frame.height * 0.37, height:self.collectionView.frame.height * 1/1)
+        layout.itemSize = CGSize(width: self.frame.height * 0.37, height:self.collectionView.frame.height * 1.1/1)
         layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0)
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
