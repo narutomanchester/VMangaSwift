@@ -18,13 +18,12 @@ struct SearchManager {
             if name == nil {
                 resolve([])
             }
+            
             var books = [Book]()
             guard let name = name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
                 reject(NetworkError.RequestURLError)
                 return
             }
-            
-            print(name)
             
             Alamofire.request("http://wannashare.info/api/v1/list/search?name=\(name)").responseJSON { response in
                 if response.request == nil {
@@ -33,6 +32,7 @@ struct SearchManager {
                 if response.value == nil {
                    reject(NetworkError.UnableToParseJSON)
                 }
+                
                 let json = JSON(response.value!)
                 for(_, json):(String, JSON) in json["data"] {
                     let book = Book(id: json["manga_id"].intValue, thumbnail: json["thumbnail"].stringValue, title: json["title"].stringValue)

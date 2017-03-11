@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import ImageSlideshow
 
 class HHHomeView: UIView ,UITableViewDataSource  , UITableViewDelegate {
 
+    @IBOutlet var sildeshow: ImageSlideshow!
     @IBOutlet weak var tableview: UITableView!
     var topBooks = [Book]()
     var lastestBooks = [Book]()
@@ -18,9 +20,11 @@ class HHHomeView: UIView ,UITableViewDataSource  , UITableViewDelegate {
         super.awakeFromNib()
         
     }
-    
+
+    let sdWebImageSource = [SDWebImageSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!, SDWebImageSource(urlString: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")!, SDWebImageSource(urlString: "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080")!]
     
     func setUp(){
+        
 
         self.tableview.dataSource = self
         self.tableview.delegate = self
