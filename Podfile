@@ -16,7 +16,7 @@ target 'VManga' do
 	pod 'FacebookCore'
 	pod 'FacebookLogin'
 	pod 'FacebookShare'
+    pod 'SocketIO'
 	pod 'ImageSlideshow', '~> 1.1.0'
-
 
 end

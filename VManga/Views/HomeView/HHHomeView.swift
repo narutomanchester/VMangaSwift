@@ -21,7 +21,6 @@ class HHHomeView: UIView ,UITableViewDataSource  , UITableViewDelegate {
         super.awakeFromNib()
         
     }
-    
 
     
     func setUp(){
