@@ -10,7 +10,7 @@ target 'VManga' do
 
 	pod 'Alamofire', '~> 4.4'
 	pod 'SwiftyJSON', '~> 3.1.4'
-	pod 'RAMAnimatedTabBarController', "~> 2.0.13" 
+	pod 'RAMAnimatedTabBarController', "~> 2.0.13"
 	pod 'SKPhotoBrowser', '~> 4.0.1'
 	pod 'SDWebImage', '~> 4.0.0'
 	pod 'FacebookCore'
@@ -18,5 +18,6 @@ target 'VManga' do
 	pod 'FacebookShare'
     pod 'SocketIO'
 	pod 'ImageSlideshow', '~> 1.1.0'
-	
+	pod "ImageSlideshow/AFURL"
+
 end

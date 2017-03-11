@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
   - Alamofire (4.4.0)
   - BlocksKit/DynamicDelegate (2.2.5)
   - Bolts (1.8.4):
@@ -30,6 +45,9 @@ PODS:
     - FBSDKCoreKit
   - ImageSlideshow (1.1.0):
     - ImageSlideshow/Core (= 1.1.0)
+  - ImageSlideshow/AFURL (1.1.0):
+    - AFNetworking (~> 3.0)
+    - ImageSlideshow/Core
   - ImageSlideshow/Core (1.1.0)
   - PromiseKit (4.1.7):
     - PromiseKit/Foundation (= 4.1.7)
@@ -57,6 +75,7 @@ DEPENDENCIES:
   - FacebookLogin
   - FacebookShare
   - ImageSlideshow (~> 1.1.0)
+  - ImageSlideshow/AFURL
   - PromiseKit (~> 4.0)
   - RAMAnimatedTabBarController (~> 2.0.13)
   - SDWebImage (~> 4.0.0)
@@ -65,6 +84,7 @@ DEPENDENCIES:
   - SwiftyJSON (~> 3.1.4)
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -83,6 +103,6 @@ SPEC CHECKSUMS:
   SocketIO: 52f4b693419f30f831ac567dc306575384128920
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 0fa10ebe2c19dcb48ee3671a6b3df9a37a451854
+PODFILE CHECKSUM: 742916fe0958651925e03c574e369e8bdcc3a512
 
 COCOAPODS: 1.2.0

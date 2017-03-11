@@ -15,12 +15,12 @@
             <rect key="frame" x="0.0" y="0.0" width="338" height="190"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="338" height="189.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="338" height="189"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" minimumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2xV-qR-8Gi">
                         <rect key="frame" x="0.0" y="29.5" width="338" height="160"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <color key="backgroundColor" white="0.13569097390000001" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iTI-yq-tZb">
                             <size key="itemSize" width="96" height="150"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -35,7 +35,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                <color key="backgroundColor" white="0.13569097390000001" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="2xV-qR-8Gi" firstAttribute="top" secondItem="Sb5-GI-Zfn" secondAttribute="bottom" id="8n1-XQ-w9E"/>
                     <constraint firstItem="Sb5-GI-Zfn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="FA3-Qc-jxe"/>
@@ -45,7 +45,7 @@
                     <constraint firstAttribute="bottom" secondItem="2xV-qR-8Gi" secondAttribute="bottom" id="yw9-yG-ZNz"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+            <color key="backgroundColor" white="0.13569097390000001" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="collectionView" destination="2xV-qR-8Gi" id="gBw-Q3-Hcl"/>
                 <outlet property="label" destination="Sb5-GI-Zfn" id="6UD-Bo-8Q2"/>

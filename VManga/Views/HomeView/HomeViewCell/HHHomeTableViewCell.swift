@@ -52,6 +52,12 @@ class HHHomeTableViewCell: UITableViewCell , UICollectionViewDelegate , UICollec
         //cell.setUp()
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let movieDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "MovieDetailViewController") as! MovieDetailViewController
+        movieDetailViewController.movie = movie
+        
+        self.navigationController?.pushViewController(movieDetailViewController, animated: true)
+    }
 
     
 }
