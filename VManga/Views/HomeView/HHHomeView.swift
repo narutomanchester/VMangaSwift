@@ -8,6 +8,7 @@
 
 import UIKit
 import ImageSlideshow
+import AFNetworking
 
 
 class HHHomeView: UIView ,UITableViewDataSource  , UITableViewDelegate {
@@ -46,7 +47,7 @@ class HHHomeView: UIView ,UITableViewDataSource  , UITableViewDelegate {
         sildeshow.pageControl.pageIndicatorTintColor = UIColor.black
         sildeshow.contentScaleMode = UIViewContentMode.scaleAspectFill
         sildeshow.currentPageChanged = { page in
-            print("current page:", page)
+            //print("current page:", page)
         }
         sildeshow.setImageInputs(afNetworkingSource)
         

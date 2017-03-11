@@ -21,7 +21,8 @@ struct API {
                 if response.value == nil {
                     reject(NetworkError.UnableToParseJSON)
                 }
-                resolve(User(jsonString: response))
+                let json = JSON(response.value!)
+                resolve(User(json: json))
             }
         }
         
@@ -30,13 +31,11 @@ struct API {
     static func getMangaInfo(manga_id: Int) -> Promise<Book> {
         return Promise { resolve, reject in
             Alamofire.request("http://wannashare.info/api/v1/manga/\(manga_id)").responseJSON { response in
-                guard let data = response.value else {
+                if response.value == nil {
                     reject(NetworkError.UnableToParseJSON)
-                    return
                 }
-                let json = JSON(data)
-                let book = Book(id: json["manga_id"].intValue, thumbnail: json["thumbnail"].stringValue, title: json["title"].stringValue)
-                resolve(book)
+                let json = JSON(response.value!)
+                resolve(Book(json: json))
             }
         }
     }

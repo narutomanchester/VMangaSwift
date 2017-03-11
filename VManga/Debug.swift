@@ -7,10 +7,7 @@
 //
 
 func debug() {
-    API.getChapter(manga_id: 11909, chapterId: 0)
-        .then { pages -> Void in
-            print(pages)
-        }.catch { e in
-            print(e)
+    API.getMangaInfo(manga_id: 13821).then { book in
+        print(book)
     }
 }

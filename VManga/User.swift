@@ -18,8 +18,7 @@ struct User {
     var avatar: String!
     
     init() {}
-    init(jsonString: Any) {
-        let json = JSON(jsonString)
+    init(json: JSON) {
         _id = json["_id"].stringValue
         facebookId = json["facebookId"].stringValue
         name = json["name"].stringValue
