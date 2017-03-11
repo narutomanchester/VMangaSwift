@@ -238,7 +238,7 @@
                         <viewControllerLayoutGuide type="top" id="fAB-fN-ZEZ"/>
                         <viewControllerLayoutGuide type="bottom" id="VJD-BP-fzS"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="IGQ-0Q-oEm">
+                    <view key="view" contentMode="scaleToFill" id="IGQ-0Q-oEm" customClass="HHHomeView" customModule="VManga" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -272,15 +272,15 @@
             </objects>
             <point key="canvasLocation" x="-2037" y="1167"/>
         </scene>
-        <!--Home View Controller-->
+        <!--View Controller-->
         <scene sceneID="EHA-Vg-aws">
             <objects>
-                <viewController id="U0X-ji-IyA" customClass="HHHomeViewController" customModule="VManga" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="U0X-ji-IyA" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Erc-56-FzY"/>
                         <viewControllerLayoutGuide type="bottom" id="TE4-WQ-ib1"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ldd-Ao-jzU" customClass="HHHomeView" customModule="VManga" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="ldd-Ao-jzU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
