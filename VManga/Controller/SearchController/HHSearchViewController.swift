@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HHSearchViewController: UIViewController , UITableViewDelegate , UITableViewDataSource, UICollectionViewDelegate , UICollectionViewDataSource , UISearchBarDelegate {
     
@@ -174,7 +175,13 @@ extension HHSearchViewController{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.Sview.collectionView.dequeueReusableCell(withReuseIdentifier: "HHBookCollectionViewCell", for: indexPath) as! HHBookCollectionViewCell
+        
+        let defaultImage = UIImage(named: "Vmanga-icon")
+        let urlImage = URL(string: books[indexPath.row].thumbnail)
+        cell.image.sd_setImage(with: urlImage, placeholderImage: defaultImage)
+
         cell.label.text = books[indexPath.row].title
+        
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -194,6 +201,7 @@ extension HHSearchViewController{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.Sview.tableview.dequeueReusableCell(withIdentifier: "HHRecentSearchBookTableViewCell") as! HHRecentSearchBookTableViewCell
         cell.bookName.text = recentSearchBooks[indexPath.row]
+        
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
