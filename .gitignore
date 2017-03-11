@@ -1,5 +1,5 @@
 # Created by https://www.gitignore.io/api/swift,macos
-VManga.xcodeproj/
+VManga.xcodeproj
 VManga/VManga.entitlements
 
 ### macOS ###
