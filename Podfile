@@ -19,5 +19,6 @@ target 'VManga' do
     pod 'SocketIO'
 	pod 'ImageSlideshow', '~> 1.1.0'
 	pod "ImageSlideshow/AFURL"
+	pod 'SCLAlertView'
 
 end
