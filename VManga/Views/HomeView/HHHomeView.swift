@@ -8,6 +8,7 @@
 
 import UIKit
 import ImageSlideshow
+import SDWebImage
 
 class HHHomeView: UIView ,UITableViewDataSource  , UITableViewDelegate {
 
@@ -21,10 +22,17 @@ class HHHomeView: UIView ,UITableViewDataSource  , UITableViewDelegate {
         
     }
     
-    let sdWebImageSource = [SDWebImageSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!, SDWebImageSource(urlString: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")!, SDWebImageSource(urlString: "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080")!]
+
     
     func setUp(){
+
+        var image1 : UIImageView
+        var  url = URL(string: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")
+        image1.sd_setImage(with: url)
         
+        var image2 : UIImageView
+        url = URL(string: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")
+        image2.sd_setImage(with: url)
 
         self.tableview.dataSource = self
         self.tableview.delegate = self
