@@ -58,6 +58,7 @@ PODS:
   - PromiseKit/UIKit (4.1.7):
     - PromiseKit/CorePromise
   - RAMAnimatedTabBarController (2.0.13)
+  - SCLAlertView (0.7.0)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -74,6 +75,7 @@ DEPENDENCIES:
   - ImageSlideshow/AFURL
   - PromiseKit (~> 4.0)
   - RAMAnimatedTabBarController (~> 2.0.13)
+  - SCLAlertView
   - SDWebImage (~> 4.0.0)
   - SKPhotoBrowser (~> 4.0.1)
   - Socket.IO-Client-Swift
@@ -92,11 +94,12 @@ SPEC CHECKSUMS:
   ImageSlideshow: 99addbef1b718272598a07036270e819d03abc17
   PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
   RAMAnimatedTabBarController: 2510f3b66954c3f77ea1042a35d34df8f5f3b604
+  SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SKPhotoBrowser: 3a7c6fc02aa1620ab17253a47a49fafda46536e8
   Socket.IO-Client-Swift: 7ad3aded3c0f74d99555e950ac3aa82ca3eefbaf
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 9db0ead637c32f8285c5a3422a0c5c5d6222f337
+PODFILE CHECKSUM: 4fef873c5ca4c1d03366b8e2e57807fefaf1bc49
 
 COCOAPODS: 1.2.0

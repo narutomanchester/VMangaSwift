@@ -19,5 +19,6 @@ target 'VManga' do
     pod 'Socket.IO-Client-Swift'
 	pod 'ImageSlideshow', '~> 1.1.0'
 	pod "ImageSlideshow/AFURL"
+	pod 'SCLAlertView'
 
 end
