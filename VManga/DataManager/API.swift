@@ -20,6 +20,7 @@ struct API {
             Alamofire.request("http://wannashare.info/auth/facebook/token?access_token=\(token)").responseJSON { response in
                 if response.value == nil {
                     reject(NetworkError.UnableToParseJSON)
+                    return
                 }
                 let json = JSON(response.value!)
                 resolve(User(json: json))
@@ -33,6 +34,7 @@ struct API {
             Alamofire.request("http://wannashare.info/api/v1/manga/\(manga_id)").responseJSON { response in
                 if response.value == nil {
                     reject(NetworkError.UnableToParseJSON)
+                    return
                 }
                 let json = JSON(response.value!)
                 resolve(Book(json: json))
@@ -68,6 +70,7 @@ struct API {
             Alamofire.request("http://wannashare.info/api/v1/list/top").responseJSON { response in
                 if response.value == nil {
                     reject(NetworkError.UnableToParseJSON)
+                    return
                 }
                 let json = JSON(response.value!)
                 for(_, json):(String, JSON) in json["data"] {
@@ -86,6 +89,7 @@ struct API {
             Alamofire.request("http://wannashare.info/api/v1/list/latest").responseJSON { response in
                 if response.value == nil {
                     reject(NetworkError.UnableToParseJSON)
+                    return
                 }
                 let json = JSON(response.value!)
                 for(_, json):(String, JSON) in json["data"] {
@@ -104,6 +108,7 @@ struct API {
             Alamofire.request("http://wannashare.info/api/v1/list/recommend").responseJSON { response in
                 if response.value == nil {
                     reject(NetworkError.UnableToParseJSON)
+                    return
                 }
                 let json = JSON(response.value!)
                 for(_, json):(String, JSON) in json["data"] {

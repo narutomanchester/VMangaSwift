@@ -15,15 +15,12 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - Alamofire (4.4.0)
-  - BlocksKit/DynamicDelegate (2.2.5)
   - Bolts (1.8.4):
     - Bolts/AppLinks (= 1.8.4)
     - Bolts/Tasks (= 1.8.4)
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
-  - Emitter (0.0.9):
-    - BlocksKit/DynamicDelegate
   - FacebookCore (0.2.0):
     - Bolts (~> 1.8)
     - FBSDKCoreKit (~> 4.15)
@@ -65,8 +62,7 @@ PODS:
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - SKPhotoBrowser (4.0.1)
-  - SocketIO (0.0.1):
-    - Emitter
+  - Socket.IO-Client-Swift (8.3.0)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
@@ -80,15 +76,13 @@ DEPENDENCIES:
   - RAMAnimatedTabBarController (~> 2.0.13)
   - SDWebImage (~> 4.0.0)
   - SKPhotoBrowser (~> 4.0.1)
-  - SocketIO
+  - Socket.IO-Client-Swift
   - SwiftyJSON (~> 3.1.4)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
-  Emitter: cf50bf44fc8817535018fbd6c4fd576b87803e78
   FacebookCore: 2cb3f0fbff218e9d3119cec84bae983b232412de
   FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
   FacebookShare: 8e9ee8ea06505e6a1d3d719b0cc63e840fb8aaeb
@@ -100,9 +94,9 @@ SPEC CHECKSUMS:
   RAMAnimatedTabBarController: 2510f3b66954c3f77ea1042a35d34df8f5f3b604
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SKPhotoBrowser: 3a7c6fc02aa1620ab17253a47a49fafda46536e8
-  SocketIO: 52f4b693419f30f831ac567dc306575384128920
+  Socket.IO-Client-Swift: 7ad3aded3c0f74d99555e950ac3aa82ca3eefbaf
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 742916fe0958651925e03c574e369e8bdcc3a512
+PODFILE CHECKSUM: 9db0ead637c32f8285c5a3422a0c5c5d6222f337
 
 COCOAPODS: 1.2.0
