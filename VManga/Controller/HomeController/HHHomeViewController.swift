@@ -55,6 +55,7 @@ class HHHomeViewController: UIViewController {
         let bookDetailViewController = storyboard?.instantiateViewController(withIdentifier: "HHBookDetailViewController") as! HHBookDetailViewController
         bookDetailViewController.book = book
         self.navigationController?.pushViewController(bookDetailViewController, animated: true)
+        //present(bookDetailViewController, animated: true, completion: nil)
     }
 
     /*

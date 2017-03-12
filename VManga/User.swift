@@ -16,6 +16,7 @@ struct User {
     var name: String!
     var email: String!
     var avatar: String!
+    var reading: String?
     
     init() {}
     init(json: JSON) {
@@ -24,5 +25,6 @@ struct User {
         name = json["name"].stringValue
         email = json["email"].stringValue
         avatar = json["avatars"].stringValue
+        reading = nil
     }
 }

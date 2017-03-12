@@ -15,6 +15,24 @@ enum NetworkError: Error {
 }
 
 struct API {
+    static func getActiveUsers() -> Promise<[User]> {
+        return Promise { resolve, reject in
+            Alamofire.request("http://wannashare.info/api/v1/realtime").responseJSON { response in
+                if response.value == nil {
+                    reject(NetworkError.UnableToParseJSON)
+                    return
+                }
+                let json = JSON(response.value!)["data"]
+                let users = json.arrayValue.map { json -> User in
+                    var user = User(json: json["user"])
+                    user.reading = json["manga"]["title"].stringValue
+                    return user
+                }
+                resolve(users)
+            }
+        }
+    }
+    
     static func getUserWithFbToken(token: String) -> Promise<User> {
         return Promise { resolve, reject in
             Alamofire.request("http://wannashare.info/auth/facebook/token?access_token=\(token)").responseJSON { response in
@@ -51,12 +69,7 @@ struct API {
                     return
                 }
                 var json = JSON(data)
-                json = json["chapters"][chapterId]
-                var chapter: JSON!
-                for (_, subJson):(String, JSON) in json {
-                    chapter = subJson
-                    break
-                }
+                let chapter = json["chapters"][chapterId]
                 pages = chapter["content"].arrayValue.map({$0.stringValue})
                 resolve(pages)
             }
