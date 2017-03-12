@@ -181,14 +181,17 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XXz-Lu-W8o">
                                 <rect key="frame" x="16" y="412" width="343" height="235"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zng-Y8-Hfw">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zng-Y8-Hfw" id="0hG-Vm-3wG">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -201,7 +204,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="zjO-nI-5Gw" firstAttribute="leading" secondItem="ZHo-8j-OHo" secondAttribute="leadingMargin" id="4S7-BR-NNC"/>
                             <constraint firstItem="gEo-Bv-3D0" firstAttribute="bottom" secondItem="kKW-nC-JfW" secondAttribute="bottom" id="59y-6k-njA"/>
@@ -221,7 +224,11 @@
                             <constraint firstItem="kKW-nC-JfW" firstAttribute="top" secondItem="sV2-fK-gFp" secondAttribute="bottom" id="kfN-tc-Ecu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zjO-nI-5Gw" secondAttribute="trailing" id="q7J-tF-6x1"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="pLu-6X-AB2" appends="YES" id="jRv-6o-NHg"/>
+                        </connections>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="bookName" destination="Tkb-dk-tR8" id="KI2-hQ-6Zp"/>
                         <outlet property="content" destination="zjO-nI-5Gw" id="Cz8-bD-KVi"/>
@@ -231,6 +238,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ccE-sG-O2v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="pLu-6X-AB2">
+                    <connections>
+                        <action selector="swipeBack:" destination="0Bf-MR-soy" id="icE-1b-eD1"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1584.8" y="-765.96701649175418"/>
         </scene>
