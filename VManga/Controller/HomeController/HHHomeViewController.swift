@@ -15,6 +15,8 @@ class HHHomeViewController: UIViewController {
         super.viewDidLoad()
         Notification()
         searchBooks()
+        User.setCurrentUser()
+        navigationController?.setNavigationBarHidden(true, animated: false)
         // Do any additional setup after loading the view.
     }
 

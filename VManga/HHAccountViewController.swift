@@ -39,7 +39,6 @@ extension HHAccountViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = activeUsersTableView.dequeueReusableCell(withIdentifier: "UserTableViewCell", for: indexPath) as! HHActiveUserTableViewCell
         let user = users[indexPath.row]
-        print(user)
         if let mangaName = user.reading {
             cell.statusLabel.text = "\(user.name!) is reading \(mangaName)"
         } else {
@@ -76,27 +75,19 @@ extension HHAccountViewController {
         socket.connect()
     }
     
-    fileprivate func setCurrentUser() {
-        if let accessToken = AccessToken.current {
-            API.getUserWithFbToken(token: accessToken.authenticationToken).then { user -> Void in
-                User.current = user
-            }.catch { e in }
-        }
-    }
-    
     fileprivate func addLoginButton() {
         let loginButton = LoginButton(readPermissions: [ .publicProfile, .email, .userFriends ])
         loginButton.center = CGPoint(x: view.center.x, y: view.frame.height - 100)
         loginButton.delegate = self
         view.addSubview(loginButton)
         
-        setCurrentUser()
+        User.setCurrentUser()
     }
 }
 
 extension HHAccountViewController: LoginButtonDelegate {
     func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
-        setCurrentUser()
+        User.setCurrentUser()
     }
     
     func loginButtonDidLogOut(_ loginButton: LoginButton) {

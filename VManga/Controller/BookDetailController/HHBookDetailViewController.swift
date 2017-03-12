@@ -74,6 +74,8 @@ class HHBookDetailViewController: UIViewController {
         setUpBookInfo()
         
         navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.navigationBar.barTintColor = colors.navigator
+
         
         self.tableview.delegate = self
         self.tableview.dataSource = self
@@ -134,6 +136,7 @@ extension HHBookDetailViewController: UITableViewDelegate {
         let index = indexPath.row
         let readingViewController = storyboard?.instantiateViewController(withIdentifier: "HHReadingViewController") as! HHReadingViewController
         readingViewController.loadChapter(manga_id: book.manga_id, chapterId: index)
+        API.postReadingManga(_id_manga: book._id)
         present(readingViewController, animated: true, completion: nil)
     }
 }
