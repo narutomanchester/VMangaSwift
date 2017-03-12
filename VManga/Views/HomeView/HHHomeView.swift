@@ -90,10 +90,10 @@ class HHHomeView: UIView ,UITableViewDataSource  , UITableViewDelegate {
         switch indexPath.row {
         case 0:
             cell.label.text = "Truyện phổ biến trong tuần"
-            cell.book = topBooks
+            cell.books = topBooks
         default:
             cell.label.text = "Truyện mới cập nhật"
-            cell.book = lastestBooks
+            cell.books = lastestBooks
         }
         
         return cell

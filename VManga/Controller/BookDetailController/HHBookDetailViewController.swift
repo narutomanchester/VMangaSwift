@@ -11,6 +11,11 @@ import SCLAlertView
 
 class HHBookDetailViewController: UIViewController , UITableViewDataSource , UITableViewDelegate{
 
+    @IBAction func swipeBack(_ sender: Any) {
+        print(0)
+        self.navigationController?.popViewController(animated: true)
+    }
+   
     var isFavor : Bool!
     var indexOfMoviesfavor : Int = 0
     var bookId : [Int] = []
@@ -72,12 +77,12 @@ class HHBookDetailViewController: UIViewController , UITableViewDataSource , UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpFavorButton()
+        setUpBookInfo()
         
-        self.content.text = book.description
+      //  print(book.description)
+       // print(book.manga_id)
         
-        let defaultImage = UIImage(named: "Vmanga-icon")
-        let urlImage = URL(string: book.thumbnail)
-        self.image.sd_setImage(with: urlImage, placeholderImage: defaultImage)
+        
         
         self.tableview.delegate = self
         self.tableview.dataSource = self
@@ -87,9 +92,14 @@ class HHBookDetailViewController: UIViewController , UITableViewDataSource , UIT
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func setUpBookInfo(){
+        
+        let defaultImage = UIImage(named: "Vmanga-icon")
+        let urlImage = URL(string: book.thumbnail)
+        self.image.sd_setImage(with: urlImage, placeholderImage: defaultImage)
+        self.bookName.text = book.title
+        self.content.text = book.description
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -97,6 +107,7 @@ class HHBookDetailViewController: UIViewController , UITableViewDataSource , UIT
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(book.numberOfChapters)
         return book.numberOfChapters
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
